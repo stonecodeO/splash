@@ -8,8 +8,9 @@ RUN npm install
 
 COPY . .
 
-RUN npm run build
+RUN npm install -g nodemon
 
-CMD ["node", "build/server.js"]
+CMD ["nodemon"]
 
 EXPOSE 8000
+

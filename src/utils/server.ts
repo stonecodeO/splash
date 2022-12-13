@@ -7,6 +7,9 @@ import postRoutes from '../routes/post';
 import mediaRoutes from '../routes/media';
 import authRoutes from '../routes/auth';
 import profileRoutes from '../routes/profile';
+import messageRoutes from '../routes/message';
+import redisCache from '../library/Cache';
+
 
 const createServer = () => {
     const router = express();
@@ -32,6 +35,7 @@ const createServer = () => {
         router.use('/api/medias', mediaRoutes);
         router.use('/api/auth', authRoutes);
         router.use('/api/profile', profileRoutes);
+        router.use('/api/message', messageRoutes);
 
         /** Error handling */
         router.use((req, res, next) => {

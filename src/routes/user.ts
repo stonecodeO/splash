@@ -7,7 +7,7 @@ import { roles_list } from '../config/roles';
 import { uploadFileMid } from '../middleware/upload';
 const router = express.Router();
 
-router.get('/all/', verifyJWT, verifyRoles(roles_list.admin), userController.readAllUsers);
+router.get('/all/', userController.readAllUsers);
 router.patch('/edit_user/:userId', validateSchema(Schemas.user.update), userController.updateUser);
 router.delete('/delete_user/:userId', userController.deleteUser);
 router.get('/user/:userId', userController.readUser);
