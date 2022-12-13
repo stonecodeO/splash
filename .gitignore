@@ -1,9 +1,9 @@
-/node_modules
-/.vscode
-/docker
+node_modules
+.vscode
+docker
 *.env
 /build
 coverage
 /mongosh
-./package-lock
-./prettierrc
+package-lock.json
+*.prettierrc
